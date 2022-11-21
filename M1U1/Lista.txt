@@ -4,3 +4,4 @@ fideos
 tomates
 queso
 pan
+frutillas
