@@ -1,12 +1,14 @@
 h3{
     background-color:aqua;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
+    height: 25px;
+    width: 300px;
 }
-h2{
-    color: red;
+h5{
+    color: blue;
     font-family: arial;
-    font-size: 50px;   
+    font-size: 40px;   
 }
 p{
     color: green;
