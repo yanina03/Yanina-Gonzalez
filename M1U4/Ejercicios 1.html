@@ -14,18 +14,14 @@
 
         if (metros >= 0 && metros <1000) {
             document.write('el transporte recomendado es a Pie.');
-        }
-        if (metros >= 1000 && metros <10000) {
-            document.write('el transporte recomendado es a Bicicleta.');
-        }
-        if (metros >= 10000 && metros <30000) {
-            document.write('el transporte recomendado es a Colectivo.');
-        }
-        if (metros >= 30000 && metros <100000) {
-            document.write('el transporte recomendado es a Auto.');
-        }
-        if (metros >= 100000) {
-            document.write('el transporte recomendado es a Avión.');
+        } else if (metros >= 1000 && metros <10000) {
+            document.write('el transporte recomendado es Bicicleta.');
+        } else if (metros >= 10000 && metros <30000) {
+            document.write('el transporte recomendado es Colectivo.');
+        } else if (metros >= 30000 && metros <100000) {
+            document.write('el transporte recomendado es Auto.');
+        } else if (metros >= 100000) {
+            document.write('el transporte recomendado es Avión.');
         }
     </script>
 

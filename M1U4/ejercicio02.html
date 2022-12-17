@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="js/codigo.js">
+    </script>
 </head>
 <body>
     <script>
-        const metros = ["0","100","1000","10000","30000","100000"];
+    const metros = ["10","11","12","13","14","15"];
         console.log(metros.length);
         console.log(metros);
 
-        const menor = metros [0];
+        const primero = metros [0];
         const ultimo = metros[metros.length-1];
-    
+        for( let i = 0; i < metros.length; i++){
+			console.log('tenemos metros ' + metros [i])
+        }
+        for(let f = 10; f <= 15; f++){
+	       document.write(f + " ");
+        }
     </script>
 </body>
 </html>
