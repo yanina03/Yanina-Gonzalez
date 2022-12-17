@@ -2,17 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="js/codigo.js">
+
+    </script>
 </head>
 <body>
     <script>
-        metros = paprseInt(prompt(transporte indicado:',''));
-        if (metros >=0 || metros <=1000){// || OR document.write('Transporte = pie');
-        }else if (metros >=1000 || metros <=10000){// || OR document.write('Transporte =bicicleta');
-    }    
+        metros = parseInt(prompt('Ingrese distancia recorrida:',''));
+
+        if (metros >= 0 && metros <1000) {
+            document.write('el transporte recomendado es a Pie.');
+        }
+        if (metros >= 1000 && metros <10000) {
+            document.write('el transporte recomendado es a Bicicleta.');
+        }
+        if (metros >= 10000 && metros <30000) {
+            document.write('el transporte recomendado es a Colectivo.');
+        }
+        if (metros >= 30000 && metros <100000) {
+            document.write('el transporte recomendado es a Auto.');
+        }
+        if (metros >= 100000) {
+            document.write('el transporte recomendado es a Avión.');
+        }
     </script>
-    
+
 </body>
 </html>
