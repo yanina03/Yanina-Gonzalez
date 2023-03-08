@@ -27,11 +27,26 @@ app.use('/users', usersRouter);
 
 /*aca hago las pruebas*/
 //select
-pool.query('select * from empleados').then(function (resultados){
-  console.log(resultados)
-});
 
-// catch 404 and forward to error handler
+//pool.query('select * from empleados').then(function (resultados){
+  //console.log(resultados)
+//});
+
+// insertar
+//var obj = {
+  //nombre: 'juan',
+  //apellido: 'lopez',
+  //trabajo: 'docente',
+  //edad: 38,
+  //salario: 1500,
+  //mail: 'juanlopez@gmail.com'
+//}
+
+//pool.query('insert into empleados set ?', [obj]).then(function (resultados){
+  //console.log(resultados)
+//});
+
+// catch 404 and forward toerror handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
