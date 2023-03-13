@@ -52,13 +52,13 @@
       <div id="Novedades" class="col-md-5 offset-md-2 croll_section">
         <h2>Novedades</h2>
         <ul class="lista-novedades">
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal"><img src="img/imagen1.jpg"> Cuidados
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="img/imagen1.jpg"> Cuidados
               1</a></li>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal"><img src="img/imagen2.jpg"> Cuidados
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="img/imagen2.jpg"> Cuidados
               2</a></li>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal"><img src="img/imagen3.jpg"> Cuidados
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="img/imagen3.jpg"> Cuidados
               3</a></li>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal"><img src="img/imagen4.jpg"> Cuidados
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="img/imagen4.jpg"> Cuidados
               4</a></li>
         </ul>
       </div><!---Cierra novedades-->
@@ -101,12 +101,13 @@
       </div><!-- fin de novedades y cuidados-->
 
       <!--Inicio  Modal -->
-      <div class="modal fade" id="modal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLabel"></h2>
+              <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+              <p>Todo lo necesario para la salud de tu mascota</p>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
