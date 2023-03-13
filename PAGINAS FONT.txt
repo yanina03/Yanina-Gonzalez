@@ -1,0 +1,5 @@
+cdnjs.com/libraries/font-awesome
+
+fontawesome.com
+
+handlebarsjs.com/guide/builtin-helpers.html#each
