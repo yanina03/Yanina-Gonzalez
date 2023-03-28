@@ -52,7 +52,7 @@ router.get('/', async function (req, res, next) {
   var obj = {
     to: 'yaninagonzalez0303@gmail.com',
     subject: 'Contacto de la Web',
-    html: nombre + " " + apellido + "se contacto a traves y quiere mas info a este correo: " + email + ".<br> Ademas, hizo el siguiente comentario: " + mensaje + ".<br> su tel es " + telefono
+    html: nombre + " " + apellido + " se contactó a través de petshop y quiere más información a este correo: " + email + ".<br> Además, hizo el siguiente comentario: " + mensaje + ".<br> su tel es " + telefono
   } // cierra var obj
 
   var transporter = nodemailer.createTransport({
