@@ -24,11 +24,13 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
 
 
         novedades = novedades.map(novedad => {
+
             if (novedad.img_id) {
                const imagen = cloudinary.image(novedad.img_id, {
-                width: 50,
-                height: 50,
+                width: 100,
+                height: 100,
                 crop: 'fill'
+                
                 });
                 return {
                     ...novedad, //titulo,subtitulo, y cuerpo
@@ -60,9 +62,9 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
         let novedad = await novedadesModel.getNovedadById(id);
         if (novedad.img_id) {
             await (destroy(novedad.img_id));
-        }
+            }
 
-
+            
         await novedadesModel.deleteNovedadesById(id);
         res.redirect('/admin/novedades')
 
@@ -144,8 +146,9 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
                     borrar_img_vieja = true;
                 }
             }
-            if (borrar_img_vieja && req.body.img_original){
+            if (borrar_img_vieja && req.body.img_original) {
                 await (destroy(req.body.img_original));
+            
             }
 
             //console.log(req.body.id); // para ver si trae id

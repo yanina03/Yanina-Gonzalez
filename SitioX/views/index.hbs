@@ -1,32 +1,10 @@
-<!-- nav class="navbar navbar-expand-lg navbar-dark bg-dark"> CODIGO DUPLICADO !!
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#PetShop">PetShop</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#Visitanos">Visitanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Novedades">Novedades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Productos">Productos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
--->
+
 <div class="container-fluid">
     <!-- inicio home-->
     <div id="Petshop" class="row align-items-center hero">
-        <div class="col-lg-3 offset-lg-2">
-            <h1>PetShop</h1>
-            <p>La salud de tu mascota es nuestra pasión</p>
+        <div class="col-lg-8 offset-lg-3">
+            <h1>PETSHOP</h1>
+            <h2>PRIMERO TUS MASCOTAS</h2>
         </div>
     </div>
 
@@ -37,35 +15,77 @@
             <ul class="lista-novedades">
                 {{#each novedades}}
                 <li>
-                    <a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}">{{titulo}}</a>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="{{imagen}}"> {{titulo}}
+                    </a>
                 </li>
                 {{/each}}
 
 
-                
+
             </ul>
         </div><!---Cierra novedades-->
 
+                <!--Inicio  Modal -->
+
+        {{#each novedades}}
+        <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src={{imagen}}>
+                        <h6>{{subtitulo}}</h6>
+                        <p>{{cuerpo}}</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <!--Fin de  Modal -->
+        <!--Fin de Novedades-->
+
         <!---Cuidados-->
-        <div class="col-md-3 my-3">
-            <div class="rounded py-5 Cuidados">
+        <div class="col-md-4 my-1">
+            <div class="rounded py-8 Cuidados">
                 <h2 class="text-center">Por que se lo merecen?</h2>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicatos">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="Por que se lo merecen?">
-                                <h5>Porque ellos nos dan amor</h5>
+                                <h5>Porque ellos 
+                                    nos dan amor.</h5>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="Por que se lo merecen?">
-                                <h5>porque son parte de tu familia</h5>
+                                <h5>Porque son parte 
+                                    de nuestra familia.</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="Por que se lo merecen?" >
+                                <h5>Porque nos acompañan
+                                     día a día.</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="Por que se lo merecen?">
+                                <h5>Porque aprendemos
+                                     de ellos.</h5>
                             </div>
                         </div>
                     </div>
@@ -77,33 +97,13 @@
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">next</span>
+                        <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </div> <!-- fin de Cuidados-->
         </div><!-- fin de novedades y cuidados-->
 
-        <!--Inicio  Modal -->
-    
-    {{#each novedades}}
-        <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="{{imagen}}">
-                        <h4>{{subtitulo}}</h4>
-                        <p>{{cuerpo}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-        <!--Fin de  Modal -->
-        <!--Fin de Novedades-->
+
 
         <!-- inicio Productos-->
         <div id="Productos" class="row align-items-center py-4 croll_section">
@@ -115,9 +115,9 @@
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
                 <h2>Nuestros Productos</h2>
-                <p>Nuestros productos son exclusivos para el cuidado y la diversion de tu mascotas, desde su nacimiento,
-                    para
-                    acompañarlos durante su crecimiento.</p>
+                <p>Nuestros productos son exclusivos para el cuidado y la diversión de tus mascotas, desde su
+                    nacimiento,
+                    para acompañarlos durante su crecimiento.</p>
             </div>
         </div>
     </div>
@@ -131,7 +131,7 @@
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card">
-                    <img src="images/imagen7.jpg" class="card-img-top" alt="camas">
+                    <img src="images/imagen7.jpg" width="100" height="250" class="card-img-top" alt="camas">
                     <div class="card-body">
                         <h5 class="card-title">Camas</h5>
                         <p class="card-text"> Camas acolchadas, estampadas,
@@ -141,28 +141,29 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="images/imagen8.jpg" class="card-img-top" alt="camas">
+                    <img src="images/imagen8.jpg" width="100" height="250" class="card-img-top" alt="camas">
                     <div class="card-body">
                         <h5 class="card-title">Juguetes</h5>
-                        <p class="card-text"> Material de plastico, libre de toxicos, lavabes.</p>
+                        <p class="card-text"> Material de plástico, libre de tóxicos, lavables, de diferentes tamaños,
+                            formas, y colores.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="images/imagen9.jpg" class="card-img-top" alt="camas">
+                    <img src="images/imagen9.jpg" width="100" height="275" class="card-img-top" alt="camas">
                     <div class="card-body">
                         <h5 class="card-title">Arnes con Pechera</h5>
-                        <p class="card-text"> Varios colores, estampados, y diferentes tamaños</p>
+                        <p class="card-text"> Varios colores, estampados, y diferentes tamaños.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="images/imagen10.jpg" class="card-img-top" alt="camas">
+                    <img src="images/imagen10.jpg" width="100" height="250" class="card-img-top" alt="camas">
                     <div class="card-body">
-                        <h5 class="card-title">Camisetas Seleccion "Messi"</h5>
-                        <p class="card-text"> Que ellos tambien te acompañen a alentar a la seleccion argentina.</p>
+                        <h5 class="card-title">Camisetas de la Selección "Messi"</h5>
+                        <p class="card-text"> Que ellos también te acompañen a alentar a la selección Argentina.</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@
         </div>
         <div class="col-md-4 mt-4 mt-sm-0">
             <h2>Contactanos</h2>
-            <form class="row g-3" action="/"method="post">
+            <form class="row g-3" action="/" method="post">
                 <div class="col-md-6">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre">
@@ -217,7 +218,3 @@
 </div>
 
 
-<!--cierre de div con id conocenos ESTO NO VA!!! DUPLICA CODIGO
-<footer>
-    <p class="text-center">Diseñado por: Yanina Gonzalez</p>
-</footer>-->
